@@ -1,0 +1,92 @@
+/* Color Variables */
+:root {
+    --border: #4c4c6e;
+    --background: #2c2c3e;
+    --text: #d1b3ff;
+    --dark-purple: #4b0082;
+    --black: #000000;
+    --title-bar-bg: #4b0082; /* Dark purple */
+    --title-bar-border: #2c2c3e; /* Background color */
+    --button-bg: #d1b3ff; /* Text color */
+    --button-border: #4c4c6e; /* Border color */
+    --button-icon: #000000; /* Black */
+}
+
+.window {
+    position: absolute;
+    background-color: var(--background);
+    border: 2px solid var(--border);
+    box-sizing: border-box;
+    z-index: 1; /* Default z-index for all windows */
+    font-family: "Arial", sans-serif;
+    color: var(--text);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    min-width: 200px;
+    min-height: 150px;
+    overflow: auto;
+    padding-top: 40px; /* Leave space for the bar */
+    position: relative; /* For absolute positioning of .bar */
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--title-bar-bg), var(--black));
+    color: var(--text);
+    cursor: move;
+    border-bottom: 2px solid var(--title-bar-border);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 12px;
+    padding-right: 5px;
+    z-index: 10; /* Make sure bar is always on top */
+}
+
+#barButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+.bar button {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    background: var(--button-bg);
+    border: 2px solid var(--button-border);
+    color: var(--button-icon);
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar button:hover {
+    background: var(--dark-purple);
+}
+
+.resizer {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+}
+
+.resizer-top-left { top: 0; left: 0; cursor: nwse-resize; }
+.resizer-top-right { top: 0; right: 0; cursor: nesw-resize; }
+.resizer-bottom-left { bottom: 0; left: 0; cursor: nesw-resize; }
+.resizer-bottom-right { bottom: 0; right: 0; cursor: nwse-resize; }
+.resizer-top { top: 0; left: 10px; width: calc(100% - 20px); height: 10px; cursor: ns-resize; }
+.resizer-left { top: 10px; left: 0; width: 10px; height: calc(100% - 20px); cursor: ew-resize; }
+.resizer-right { top: 10px; right: 0; width: 10px; height: calc(100% - 20px); cursor: ew-resize; }
+.resizer-bottom { bottom: 0; left: 10px; width: calc(100% - 20px); height: 10px; cursor: ns-resize; }

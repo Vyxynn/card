@@ -47,6 +47,7 @@ body {
     background-color: var(--background);
     box-sizing: border-box;
     color: var(--text);
+    padding-top: 35px;
 }
 
 .cardColumn {
@@ -91,51 +92,13 @@ body {
     cursor: pointer;
 }
 
-.title-bar {
-    background: linear-gradient(to bottom, var(--title-bar-bg), var(--black));
-    color: white;
-    padding: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom: 2px solid var(--title-bar-border);
-    grid-column: span 3;
-}
-
-.title-bar .title {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.title-bar .buttons {
-    display: flex;
-    gap: 5px;
-}
-
-.title-bar .buttons div {
-    width: 15px;
-    height: 15px;
-    background-color: var(--button-bg);
-    border: 1px solid var(--button-border);
-    border-radius: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.title-bar .buttons div img {
-    width: 100%;
-    height: 100%;
-}
-
 #linkedSocials {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #linkedSocials a {
@@ -180,15 +143,6 @@ body {
     .cardColumn {
         padding: 10px;
     }
-
-    .title-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .title-bar .buttons {
-        margin-top: 5px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -199,10 +153,6 @@ body {
     }
 
     .cardColumn {
-        width: 100%;
-    }
-
-    .title-bar {
         width: 100%;
     }
 }
