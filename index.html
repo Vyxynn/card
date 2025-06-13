@@ -7,28 +7,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="window.css">
     <link rel="stylesheet" href="activity.css">
+    <link rel="stylesheet" href="spotify.css">
 </head>
 <body>
 
     <!--
     TODO Spotify embeds (3 top artists of month, 3 top songs of month, last listened to song)
     TODO Continue latest post embed (YT Video, Twitch stream, TikTok Video)
-    TODO Discord current activity displayed by pfp
-    TODO Discord last 3 activities
     -->
 
     <div class="container" style="position: relative;">
         <div class="card window">
             <div class="cardColumn"> <!--Profile Image-->
                 <div class="center">
-                    <img src="https://avatars.githubusercontent.com/u/108044556" alt="profile" width="100" height="100">
+                    <img src="https://avatars.githubusercontent.com/u/108044556" alt="profile" width="100" height="100"><hr>
                     <p>Skye | she/they/it</p>
-                </div>
+                </div><hr>
 
                 <!-- current discord activity -->
                 <div class="center" id="discordActivity">
                     <p id="activity"></p>
-                </div>
+                </div><hr>
             </div>
             <div class="cardColumn">
                 <div class="flags">
@@ -39,7 +38,7 @@
                     <a href="https://lgbtqia.fandom.com/wiki/Lesbian" target="_blank" title="Lesbian"><img src="./assets/lesbianFlag.png" alt="Lesbian"></a>
                     <a href="https://lgbtqia.fandom.com/wiki/Demisexual" target="_blank" title="Demisexual"><img src="./assets/demisexualFlag.png" alt="Demisexual"></a>
                     <a href="https://lgbtqia.wiki/wiki/Ambiamorous" target="_blank" title="Ambiamorous"><img src="./assets/ambiamorousFlag.png" alt="Ambiamorous"></a>
-                </div>
+                </div><hr>
 
                 <div class="politics">
                     <p><strong>Politics: </strong>Anarcho-Eco-Socialism</p>
@@ -47,7 +46,7 @@
 
                 <div class="philosophy">
                     <p><strong>Philosophy: </strong>Optimistic-Nihilism</p>
-                </div>
+                </div><hr>
 
                 <div class="likes">
                     <p><strong>Likes: </strong></p>
@@ -55,6 +54,14 @@
 
                 <div class="dislikes">
                     <p><strong>Dislikes: </strong></p>
+                </div><hr>
+
+                <div class="spotifyInfo">
+                    <p>Top Artists of the Month</p>
+                    <div id="spotifyArtists"></div><hr>
+
+                    <p>Top Songs of the Month</p>
+                    <div id="spotifySongs"></div><hr>
                 </div>
             </div> <!--About-->
             <div class="cardColumn"> <!--Socials-->
@@ -77,12 +84,12 @@
                     <a href="https://github.com/Vyxynn" target="_blank" title="GitHub">
                         <img src="./assets/github.png" alt="GitHub">
                     </a>
-                </div>
+                </div><hr>
 
                 <div id="latestPost">
                     <p>Latest Post</p>
                     <div id="postContent"></div>
-                </div>
+                </div><hr>
             </div>
         </div>
     </div>
@@ -96,5 +103,6 @@
     <script src="getPost.js"></script>
     <script src="window.js"></script>
     <script src="activity.js"></script>
+    <script src="spotify.js"></script>
 </body>
 </html>

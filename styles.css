@@ -43,7 +43,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     border: 3px solid var(--border);
     width: 65vw;
-    min-height: 35vh;
     background-color: var(--background);
     box-sizing: border-box;
     color: var(--text);
@@ -126,6 +125,12 @@ body {
 .flags > *{
     width: 30px;
     height: auto;
+}
+
+hr {
+    border: 1px solid var(--border);
+    width: 100%;
+    margin: 10px 0;
 }
 
 @media (max-width: 1200px) {

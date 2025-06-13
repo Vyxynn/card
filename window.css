@@ -27,6 +27,8 @@
     overflow: auto;
     padding-top: 40px; /* Leave space for the bar */
     position: relative; /* For absolute positioning of .bar */
+    min-height: 35vh;
+    max-height: 80vh;
 }
 
 .bar {
@@ -41,7 +43,6 @@
     align-items: center;
     background: linear-gradient(to bottom, var(--title-bar-bg), var(--black));
     color: var(--text);
-    cursor: move;
     border-bottom: 2px solid var(--title-bar-border);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
